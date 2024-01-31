@@ -18,6 +18,7 @@ state = {
         return
     }
     console.log(newLabel)
+    
     this.setState({
       label: newLabel
     })
