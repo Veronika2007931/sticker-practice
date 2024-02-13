@@ -13,15 +13,19 @@ state = {
   }
 
   handleChange=(newLabel)=>{
-
+     
     if(this.state.label === newLabel){
-        return
+       return
     }
+
+   
     console.log(newLabel)
     
     this.setState({
       label: newLabel
     })
+
+    return( <p>{newLabel}</p>)
   }
 
     render(){
