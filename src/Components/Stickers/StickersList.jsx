@@ -1,6 +1,7 @@
 import {Sticker} from "./Sticker"
 import { UlList } from "./Sticker.styled"
 import { Component } from 'react';
+import {Choice} from "./Choice"
 import stickerData from '../../stickers.json'
 
 
@@ -25,11 +26,12 @@ state = {
       label: newLabel
     })
 
-    return( <p>{newLabel}</p>)
   }
 
     render(){
     return(
+      <>
+       <Choice label={this.state.label}/>
         <UlList>
        {stickerData.map(({img,label})=>{
         return(
@@ -42,5 +44,7 @@ state = {
         )
        })}
         </UlList>
+  </>
     )}
+
 }
